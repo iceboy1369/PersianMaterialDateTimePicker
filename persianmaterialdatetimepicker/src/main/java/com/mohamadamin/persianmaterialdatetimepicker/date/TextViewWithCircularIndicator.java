@@ -23,7 +23,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
-import androidx.annotation.NonNull;
 import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
@@ -70,7 +69,7 @@ public class TextViewWithCircularIndicator extends AppCompatTextView {
     }
 
     @Override
-    public void onDraw(@NonNull Canvas canvas) {
+    public void onDraw(Canvas canvas) {
         if (mDrawCircle) {
             final int width = getWidth();
             final int height = getHeight();

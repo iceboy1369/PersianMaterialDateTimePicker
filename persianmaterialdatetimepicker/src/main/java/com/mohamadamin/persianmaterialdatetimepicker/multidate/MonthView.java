@@ -25,7 +25,6 @@ import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.widget.ExploreByTouchHelper;
@@ -259,7 +258,7 @@ public abstract class MonthView extends View {
   }
 
   @Override
-  public boolean dispatchHoverEvent(@NonNull MotionEvent event) {
+  public boolean dispatchHoverEvent(MotionEvent event) {
     // First right-of-refusal goes the touch exploration helper.
     if (mTouchHelper.dispatchHoverEvent(event)) {
       return true;
@@ -268,7 +267,7 @@ public abstract class MonthView extends View {
   }
 
   @Override
-  public boolean onTouchEvent(@NonNull MotionEvent event) {
+  public boolean onTouchEvent(MotionEvent event) {
     switch (event.getAction()) {
       case MotionEvent.ACTION_UP:
         final int day = getDayFromLocation(event.getX(), event.getY());

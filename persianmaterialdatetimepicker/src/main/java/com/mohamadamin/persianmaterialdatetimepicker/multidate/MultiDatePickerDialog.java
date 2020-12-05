@@ -21,8 +21,6 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import android.util.Log;
@@ -152,13 +150,13 @@ public class MultiDatePickerDialog extends DialogFragment implements
    * @param callBack     How the parent is notified that the date is set.
    * @param selectedDays Selected days shown on date picker.
    */
-  public static MultiDatePickerDialog newInstance(OnDateSetListener callBack, @Nullable ArrayList<PersianCalendar> selectedDays) {
+  public static MultiDatePickerDialog newInstance(OnDateSetListener callBack, ArrayList<PersianCalendar> selectedDays) {
     MultiDatePickerDialog ret = new MultiDatePickerDialog();
     ret.initialize(callBack, selectedDays);
     return ret;
   }
 
-  public void initialize(OnDateSetListener callBack, @Nullable ArrayList<PersianCalendar> selectedDays) {
+  public void initialize(OnDateSetListener callBack, ArrayList<PersianCalendar> selectedDays) {
     mCallBack = callBack;
     if (selectedDays != null) {
       setSelectedDays(selectedDays);
@@ -182,7 +180,7 @@ public class MultiDatePickerDialog extends DialogFragment implements
   }
 
   @Override
-  public void onSaveInstanceState(@NonNull Bundle outState) {
+  public void onSaveInstanceState(Bundle outState) {
     super.onSaveInstanceState(outState);
     outState.putSerializable(KEY_SELECTED_DAYS, mSelectedDaysCalendars);
     outState.putInt(KEY_WEEK_START, mWeekStart);

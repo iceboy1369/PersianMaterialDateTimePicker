@@ -30,9 +30,6 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
-
-import androidx.annotation.NonNull;
-
 import com.mohamadamin.persianmaterialdatetimepicker.Utils;
 import com.mohamadamin.persianmaterialdatetimepicker.date.DatePickerDialog.OnDateChangedListener;
 import com.mohamadamin.persianmaterialdatetimepicker.utils.LanguageUtils;
@@ -429,7 +426,7 @@ public abstract class DayPickerView extends ListView implements OnScrollListener
     }
 
     @Override
-    public void onInitializeAccessibilityEvent(@NonNull AccessibilityEvent event) {
+    public void onInitializeAccessibilityEvent(AccessibilityEvent event) {
         super.onInitializeAccessibilityEvent(event);
         event.setItemCount(-1);
    }
@@ -450,8 +447,7 @@ public abstract class DayPickerView extends ListView implements OnScrollListener
      * in the month list.
      */
     @Override
-    @SuppressWarnings("deprecation")
-    public void onInitializeAccessibilityNodeInfo(@NonNull AccessibilityNodeInfo info) {
+    public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info) {
         super.onInitializeAccessibilityNodeInfo(info);
         if(Build.VERSION.SDK_INT >= 21) {
             info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);

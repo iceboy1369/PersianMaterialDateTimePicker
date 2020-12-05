@@ -33,7 +33,6 @@ import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import com.mohamadamin.persianmaterialdatetimepicker.HapticFeedbackController;
 import com.mohamadamin.persianmaterialdatetimepicker.R;
@@ -183,7 +182,7 @@ public class DatePickerDialog extends DialogFragment implements
   }
 
   @Override
-  public void onSaveInstanceState(@NonNull Bundle outState) {
+  public void onSaveInstanceState(Bundle outState) {
     super.onSaveInstanceState(outState);
     outState.putInt(KEY_SELECTED_YEAR, mPersianCalendar.getPersianYear());
     outState.putInt(KEY_SELECTED_MONTH, mPersianCalendar.getPersianMonth());

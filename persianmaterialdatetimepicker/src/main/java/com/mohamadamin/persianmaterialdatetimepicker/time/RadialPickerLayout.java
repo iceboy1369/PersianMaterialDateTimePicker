@@ -24,7 +24,6 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.annotation.NonNull;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -782,8 +781,7 @@ public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
    * in the circle.
    */
   @Override
-  @SuppressWarnings("deprecation")
-  public void onInitializeAccessibilityNodeInfo(@NonNull AccessibilityNodeInfo info) {
+  public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info) {
     super.onInitializeAccessibilityNodeInfo(info);
     if (Build.VERSION.SDK_INT >= 21) {
       info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);

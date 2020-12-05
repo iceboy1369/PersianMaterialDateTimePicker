@@ -21,7 +21,6 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -433,7 +432,7 @@ public abstract class DayPickerView extends ListView implements OnScrollListener
     }
 
     @Override
-    public void onInitializeAccessibilityEvent(@NonNull AccessibilityEvent event) {
+    public void onInitializeAccessibilityEvent(AccessibilityEvent event) {
         super.onInitializeAccessibilityEvent(event);
         event.setItemCount(-1);
     }
@@ -455,7 +454,7 @@ public abstract class DayPickerView extends ListView implements OnScrollListener
      */
     @Override
     @SuppressWarnings("deprecation")
-    public void onInitializeAccessibilityNodeInfo(@NonNull AccessibilityNodeInfo info) {
+    public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info) {
         super.onInitializeAccessibilityNodeInfo(info);
         if (Build.VERSION.SDK_INT >= 21) {
             info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);
