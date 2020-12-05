@@ -1,5 +1,5 @@
 # PersianMaterialDateTimePicker
-This library offers a hijri/shamsi (Iran Calendar) Date Picker and a normal time picker designed on [Google's Material Design Principals For Pickers](http://www.google.com/design/spec/components/pickers.html) for Android 4.0.3 (API 15) +.
+This library offers a hijri/shamsi (Iran Calendar) Date Picker and a normal time picker designed on [Google's Material Design Principals For Pickers](http://www.google.com/design/spec/components/pickers.html) for Android 5.0 (API 17) +.
 
 Date Picker | Time Picker
 ---- | ----
