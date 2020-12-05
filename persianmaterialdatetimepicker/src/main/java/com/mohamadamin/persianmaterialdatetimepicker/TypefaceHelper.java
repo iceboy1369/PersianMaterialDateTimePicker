@@ -1,9 +1,7 @@
 package com.mohamadamin.persianmaterialdatetimepicker;
 
-
 import android.content.Context;
 import android.graphics.Typeface;
-
 import androidx.collection.SimpleArrayMap;
 
 public class TypefaceHelper {
